@@ -1,53 +1,40 @@
-import { useState, ReactElement } from 'react'
-import './App.css'
-
-
-function DynamicForm() {
-  return (
-    <div>
-      <select>
-        <option value="form1">form 1</option>
-        <option value="form2">form 2</option>
-        <option value="form3">form 3</option>
-      </select>
-    </div>
-  );
-}
+import './App.css';
 
 
 function MainForm() {
-  return (
-    <p>
-      <h2>Refactor this component input a data input form</h2>
-      <ul>
-        <li>A "Topic" input that takes maximum 50 charactors. This field is required.</li>
-        <li>A "Content" multi-line input. This field is required.</li>
-        <li>A "Submit" button that sends user inputs to the backend API.</li>
-      </ul>
-      <DynamicForm/>
-    </p>
-  )
+    return (
+        <div>
+            <p>Refactor this component to a data input form</p>
+            <ul>
+                <li>A "Topic" input that takes a maximum of 50 characters. This field is required.</li>
+                <li>A "Content" multi-line input. This field is required.</li>
+                <li>A "Submit" button sends user inputs to the backend API.</li>
+            </ul>
+        </div>
+    );
 }
 
 
 function ItemList() {
-  return (
-    <div>
-      <p>Load all the items from backend API and display as bullet points.</p>
-      <button>Click this button to refresh</button>
-    </div>
-  );
+    return (
+      <div>
+        <p>Load all the items from the backend API and display them as bullet points.</p>
+        <button>Click this button to refresh the list</button>
+      </div>
+    );
 }
 
 
 function App() {
   return (
     <div className="App">
-      <MainForm/>
-      <hr/>
-      <ItemList/>
+        <h2>My Form</h2>
+        <MainForm/>
+        <hr/>
+        <ItemList/>
     </div>
-  )
+  );
 }
 
-export default App
+
+export default App;
